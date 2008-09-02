@@ -6,4 +6,4 @@ $.inspect('This is a string'); // Uses the alert as output by default
 
 $.inspect([1,2,3,4], 'console'); // The console log can also be utilized
 
-$.inspect(this.document, 'window'); // A new window can be used for larger objects
+$.inspect(document, 'window'); // A new window can be used for larger objects
