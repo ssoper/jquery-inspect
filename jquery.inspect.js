@@ -100,7 +100,10 @@ jQuery.inspect._windowSettings.styles = "\
 	table { \
 		width: " + (jQuery.inspect._windowSettings.width - 20) + "px; \
 		border: 1px solid black; \
-} \
+  } \
+  td { \
+    vertical-align: top;
+  } \
 </style>";
 
 jQuery.inspect._windowSettings.config = "width=" + jQuery.inspect._windowSettings.width + ",height=" + jQuery.inspect._windowSettings.height + ",scrollbars=yes,location=no,menubar=no,toolbar=no";
