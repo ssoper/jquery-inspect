@@ -102,7 +102,7 @@ jQuery.inspect._windowSettings.styles = "\
 		border: 1px solid black; \
   } \
   td { \
-    vertical-align: top;
+    vertical-align: top; \
   } \
 </style>";
 
