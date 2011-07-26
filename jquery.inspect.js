@@ -18,6 +18,14 @@ jQuery.inspect = function(obj, output) {
 			_build = jQuery.inspect._buildHTML;
 			_dump = jQuery.inspect._window;
 			break;
+		case 'jasmine':
+			_build = jQuery.inspect._buildText;
+			_dump = jQuery.inspect._jasmine;
+			break;
+		case 'text':
+			_build = jQuery.inspect._buildText;
+			_dump = jQuery.inspect._jasmine;
+			break;
 		default:
 		  _build = jQuery.inspect._buildText;
 			_dump = jQuery.inspect._alert;
@@ -40,7 +48,7 @@ jQuery.inspect = function(obj, output) {
 			text = jQuery.inspect._parseObject(obj, _build);
 	}
 
-	_dump(text);
+	return _dump(text);
 }
 
 jQuery.inspect._parseObject = function(obj, _dumpTo) {
@@ -107,3 +115,11 @@ jQuery.inspect._windowSettings.styles = "\
 </style>";
 
 jQuery.inspect._windowSettings.config = "width=" + jQuery.inspect._windowSettings.width + ",height=" + jQuery.inspect._windowSettings.height + ",scrollbars=yes,location=no,menubar=no,toolbar=no";
+
+jQuery.inspect._jasmine = function(text) {
+	jasmine.log(text);
+}
+
+jQuery.inspect._thru = function(text) {
+	return text;
+}
