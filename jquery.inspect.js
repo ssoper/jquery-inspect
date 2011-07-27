@@ -24,7 +24,7 @@ jQuery.inspect = function(obj, output) {
 			break;
 		case 'text':
 			_build = jQuery.inspect._buildText;
-			_dump = jQuery.inspect._jasmine;
+			_dump = jQuery.inspect._thru;
 			break;
 		default:
 		  _build = jQuery.inspect._buildText;
